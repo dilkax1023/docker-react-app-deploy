@@ -1,0 +1,31 @@
+{
+	"name": "react-app-deploy-docker",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --host",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"test:c": "vitest run --coverage",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"@types/react-test-renderer": "^18.0.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-test-renderer": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.15",
+		"@types/react-dom": "^18.0.6",
+		"@vitejs/plugin-react": "^2.0.0",
+		"@vitest/ui": "latest",
+		"c8": "^7.12.0",
+		"happy-dom": "^4.1.0",
+		"jsdom": "latest",
+		"typescript": "^4.6.4",
+		"vite": "^3.0.0",
+		"vitest": "^0.20.2"
+	}
+}

@@ -1,0 +1,10 @@
+For running the test: 
+solution 1:
+execute the commande: docker run -it  <id of the container> pnpm run test 
+Note: if we add additional test cases, it will not automatically run it, because our container is outdated snapshot of our image 
+for solving that we run 'pnpm run test' inside of the running container by running following steps: 
+first step: in the first terminal, run: docker-compose up
+second step: in the second terminal, run: docker exec -it <id of the running container> pnpm run test
+
+Solution 2: 
+

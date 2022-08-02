@@ -1,0 +1,19 @@
+FROM node:16
+
+WORKDIR /app
+
+# Resolving an issue with esbuild in docker container
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# Install pnpm package manager
+RUN npm install -g pnpm
+
+# Files required by pnpm install
+COPY package.json pnpm-lock.yaml ./
+
+RUN pnpm install
+
+COPY . .
+
+CMD [ "pnpm","run", "dev" ]
